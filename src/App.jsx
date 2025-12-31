@@ -31,12 +31,13 @@ export default function App() {
       
       {/* 1. BACKGROUND LAYER: Full-bleed imagery */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-        style={{ 
-          backgroundImage: `url('/assets/bg-main.jpg')`, // You'll add your Dispatch-style art here
-          filter: activeId ? 'brightness(0.3) blur(8px)' : 'brightness(0.6)'
-        }}
-      />
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
+  style={{ 
+    // This dynamically adjusts the path based on your vite.config.js base setting
+    backgroundImage: `url('${import.meta.env.BASE_URL}assets/bg-main.jpg')`, 
+    filter: activeId ? 'brightness(0.3) blur(8px)' : 'brightness(0.6)'
+  }}
+/>
 
       {/* 2. HUD LAYER: Persistent Sidebar (The Expert Identity) */}
       <div className="absolute top-12 left-12 z-20 max-w-xs">
