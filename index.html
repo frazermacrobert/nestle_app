@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full overflow-hidden bg-zinc-950">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <title>Frazer MacRobert | L&D Specialist (York)</title>
+    <meta name="description" content="A digital L&D experience designed for Nestlé Operational Services Worldwide.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Prevent the 'bounce' effect on mobile/trackpads to keep it feeling like a console game */
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        overscroll-behavior: none;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #f4f4f5; /* zinc-100 */
+      }
+
+      /* Initial loading state styling */
+      #root {
+        height: 100%;
+        width: 100%;
+      }
+
+      /* A subtle 'Scanline' effect overlay to give it that tech/game feel without being distracting */
+      .scanlines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgba(18, 16, 16, 0) 50%,
+          rgba(0, 0, 0, 0.05) 50%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 0, 0, 0.01),
+          rgba(0, 255, 0, 0.005),
+          rgba(0, 0, 255, 0.01)
+        );
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+        z-index: 50;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <div class="scanlines"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
